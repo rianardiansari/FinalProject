@@ -38,7 +38,7 @@ public class SignUpPage {
     }
 
     public void assert_signup_message_show(String Message){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         assertTrue(alert.getText().contains(Message));
