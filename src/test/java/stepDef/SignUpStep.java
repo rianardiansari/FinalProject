@@ -36,7 +36,7 @@ public class SignUpStep {
     }
 
     @Then("sign up message show {string}")
-    public void signUpMessageShow(String Message) {
+    public void signUpMessageShow(String Message) throws InterruptedException {
         signUpPage.assert_signup_message_show(Message);
     }
 

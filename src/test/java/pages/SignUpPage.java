@@ -37,7 +37,8 @@ public class SignUpPage {
         driver.findElement(btn_sign_up).click();
     }
 
-    public void assert_signup_message_show(String Message){
+    public void assert_signup_message_show(String Message) throws InterruptedException {
+        Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
