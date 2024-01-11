@@ -30,7 +30,8 @@ public class LoginPage {
         driver.findElement(input_pwd).sendKeys(pwd);
     }
 
-    public void clickBtnLogin(){
+    public void clickBtnLogin() throws InterruptedException {
+        Thread.sleep(2500);
         driver.findElement(btn_login).click();
     }
 

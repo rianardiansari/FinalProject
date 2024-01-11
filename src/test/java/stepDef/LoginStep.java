@@ -24,7 +24,7 @@ public class LoginStep {
     }
 
     @And("user click button login")
-    public void userClickButtonLogin() {
+    public void userClickButtonLogin() throws InterruptedException {
         loginPage.clickBtnLogin();
     }
 
