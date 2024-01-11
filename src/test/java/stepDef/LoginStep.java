@@ -29,7 +29,7 @@ public class LoginStep {
     }
 
     @Then("nav menu show {string}")
-    public void navMenuShow(String Message) {
+    public void navMenuShow(String Message) throws InterruptedException {
         loginPage.navMenuShow(Message);
     }
 

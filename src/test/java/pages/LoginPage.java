@@ -34,7 +34,8 @@ public class LoginPage {
         driver.findElement(btn_login).click();
     }
 
-    public void navMenuShow(String Message){
+    public void navMenuShow(String Message) throws InterruptedException {
+        Thread.sleep(2500);
         WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
         w.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//*[text() = '" + Message + "']") ));
 
