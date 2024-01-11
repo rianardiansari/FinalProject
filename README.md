@@ -24,7 +24,7 @@
 2. Get user by ID<br/>
 3. Create a new user<br/>
 4. Delete a user<br/>
-5. Update a user<br/><br/>
+5. Update a user<br/>
 
 <h4>https://dummyapi.io/docs/tag</h4>
 1. Get list of tags<br/>
