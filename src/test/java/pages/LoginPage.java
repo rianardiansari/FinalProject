@@ -32,10 +32,12 @@ public class LoginPage {
 
     public void clickBtnLogin(){
         driver.findElement(btn_login).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); //add delay
     }
 
     public void navMenuShow(String Message){
+        WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+        w.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//*[text() = '" + Message + "']") ));
+
         driver.findElement(By.xpath("//*[text() = '" + Message + "']")).isDisplayed();
     }
 
