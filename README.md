@@ -31,3 +31,4 @@
 6. Automation Testing run automatically
 
 <h3>Test Result</h3>
+<img width="1440" alt="Screenshot 2024-01-11 at 14 03 07" src="https://github.com/rianardiansari/FinalProjectRianaArdiansari/assets/149749846/df7de913-5175-4f20-9199-d18140bbea1a">
