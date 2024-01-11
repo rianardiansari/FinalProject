@@ -34,7 +34,7 @@ public class LoginStep {
     }
 
     @Then("login message show {string}")
-    public void loginMessageShow(String Message) {
+    public void loginMessageShow(String Message) throws InterruptedException {
         loginPage.assert_login_message_show(Message);
     }
 

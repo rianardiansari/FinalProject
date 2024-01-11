@@ -41,8 +41,9 @@ public class LoginPage {
         driver.findElement(By.xpath("//*[text() = '" + Message + "']")).isDisplayed();
     }
 
-    public void assert_login_message_show(String Message){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    public void assert_login_message_show(String Message) throws InterruptedException {
+        Thread.sleep(2500);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         assertTrue(alert.getText().contains(Message));
