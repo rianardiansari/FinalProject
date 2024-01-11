@@ -19,14 +19,14 @@
 8. Creating reports with json and html format<br/>
 
 <h3>API Test Case</h3>
-https://dummyapi.io/docs/user<br/>
+<h4>https://dummyapi.io/docs/user</h4>
 1. Get all users<br/>
 2. Get user by ID<br/>
 3. Create a new user<br/>
 4. Delete a user<br/>
 5. Update a user<br/><br/>
 
-https://dummyapi.io/docs/tag<br/>
+<h4>https://dummyapi.io/docs/tag</h4>
 1. Get list of tags<br/>
 
 <h3>Web Test Case</h3>
