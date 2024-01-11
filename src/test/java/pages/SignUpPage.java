@@ -21,7 +21,7 @@ public class SignUpPage {
 
     public void goToSignUpPage() {
         driver.get("https://www.demoblaze.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); //add delay
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); //add delay
         driver.findElement(sign_up_link).click();
     }
 
@@ -38,7 +38,7 @@ public class SignUpPage {
     }
 
     public void assert_signup_message_show(String Message){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         assertTrue(alert.getText().contains(Message));

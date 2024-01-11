@@ -20,7 +20,7 @@ public class LoginPage {
 
     public void goToLoginPage() {
         driver.get("https://www.demoblaze.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); //add delay
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); //add delay
         driver.findElement(login_link).click();
     }
 
@@ -35,14 +35,14 @@ public class LoginPage {
     }
 
     public void navMenuShow(String Message){
-        WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
         w.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//*[text() = '" + Message + "']") ));
 
         driver.findElement(By.xpath("//*[text() = '" + Message + "']")).isDisplayed();
     }
 
     public void assert_login_message_show(String Message){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         assertTrue(alert.getText().contains(Message));
